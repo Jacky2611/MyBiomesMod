@@ -3,9 +3,12 @@
 use /give Player mybiomesmod:biomeFinder to get the biomes Finder
 
 
-Installation:
+#### Installation(for modders):
+Eclipse -> Git -> Clone URI -> master -> FolderName -> Import as general Project -> Finish
+Remove the project from eclipse but keep it on your hard drive
+Then go to the project folder (standart is User/git/alchemisticArts) and run:
 
-Open eclipse, click on import > git > clone URI and download the entire project to somewhere one your disk.
-Open the folder in a commandline and run:
-gradlew.bat setupDecompWorkspace eclipse
-Now restart eclipse and refresh the project.
+  (./)gradlew(.bat) setupDevWorkspace
+  (./)gradlew(.bat) eclipse
+Back in eclipse import -> General -> existing project in Workspace -> Choose the project Folder -> import
+And you are done!
