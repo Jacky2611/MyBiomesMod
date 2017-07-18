@@ -1,0 +1,16 @@
+[
+{
+  "modid": "mybiomes",
+  "name": "MyBiomes",
+  "description": "More biomes",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Arionas_MC"],
+  "credits": "Arionas_MC",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
