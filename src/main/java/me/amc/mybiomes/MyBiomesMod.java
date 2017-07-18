@@ -26,6 +26,7 @@ public class MyBiomesMod {
     //Items
     public static Item itemBiomeFinder;
     
+    
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
     	
@@ -36,17 +37,9 @@ public class MyBiomesMod {
     	GameRegistry.registerItem(itemBiomeFinder = new ItemBiomeFinder("biomeFinder"), "biomeFinder");
 
     	
-    	
-    	
-    	
-    //	BiomeManager.addSpawnBiome(diamondWoods);
-    //	BiomeManager.addBiome(BiomeType.COOL, new BiomeEntry(diamondWoods, 10));
-    	
-    //	WorldChunkManager.allowedBiomes.add(diamondWoods);
-    	
-    //	BiomeDictionary.registerBiomeType(diamondWoods, Type.FOREST);
-    //	BiomeManager.addSpawnBiome(diamondWoods);
+
     	BiomeManager.addBiome(BiomeType.COOL, new BiomeEntry(diamondWoods, 1));
+    	BiomeManager.addSpawnBiome(diamondWoods);
 
     }
     
@@ -54,8 +47,7 @@ public class MyBiomesMod {
     @EventHandler
     public void init(FMLInitializationEvent event) {
 		
-    //	BiomeManager.addSpawnBiome(diamondWoods);
-    //	BiomeManager.addBiome(BiomeType.COOL, new BiomeEntry(diamondWoods, 50));
+
     	
     }
 }

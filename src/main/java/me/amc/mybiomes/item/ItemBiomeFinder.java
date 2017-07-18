@@ -8,6 +8,7 @@ import me.amc.mybiomes.MyBiomesMod;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockPos;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 
 public class ItemBiomeFinder extends ItemBasic{
@@ -26,7 +27,7 @@ public class ItemBiomeFinder extends ItemBasic{
     	
         BlockPos biomePos = worldIn.getWorldChunkManager().findBiomePosition((int)playerIn.posX, (int)playerIn.posZ, 5000, biomesToFind, rdm);
         
-        System.out.println("Found Biome at: " + biomePos.getX() + " " +biomePos.getZ());
+        System.out.println("Found Biome " +worldIn.getBiomeGenForCoords(biomePos).biomeName + " at: " + biomePos.getX() + " " +biomePos.getZ());
         return itemStackIn;
     }
 }

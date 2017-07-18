@@ -17,10 +17,11 @@ public class WorldGenDiamondTree extends WorldGenerator{
 
 	public boolean generate(World world, Random random, BlockPos pos)
 	{
-			return true;
-		
-			/*
-		
+			if(true)
+				return true;
+	
+			//making sure that this code isn't started until you fix it.
+			
 			while (world.isAirBlock(pos.down()) && pos.getY() > 55)
 			{
 				pos.subtract(new Vec3i(0, 1, 0));
@@ -104,7 +105,7 @@ public class WorldGenDiamondTree extends WorldGenerator{
 
 			return true;
 			
-			*/
+			
 	
 	}
 
