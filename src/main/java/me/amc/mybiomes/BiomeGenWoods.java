@@ -33,8 +33,8 @@ public class BiomeGenWoods extends BiomeGenBase {
 		super.decorate(par1World, par2Random, pos);
 
 		for(int i = 0; i < par2Random.nextInt(2)+1; i++) {
-			int x = par2Random.nextInt(16) + 8;
-			int z = par2Random.nextInt(16) + 8;
+			int x = par2Random.nextInt(16) - 8;
+			int z = par2Random.nextInt(16) - 8;
 			int y = par2Random.nextInt(par1World.getHorizon(pos.add(x, 0, z)).getY() + 32);
 			
 			WorldGenDiamondTree worldGenDiamondTree = new WorldGenDiamondTree();

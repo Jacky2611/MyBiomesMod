@@ -15,22 +15,28 @@ public class WorldGenDiamondTree extends WorldGenerator{
 	IBlockState wood = Blocks.diamond_block.getDefaultState();
 	IBlockState leaf = Blocks.emerald_block.getDefaultState();
 
+	
 	public boolean generate(World world, Random random, BlockPos pos)
 	{
-			if(true)
-				return true;
-	
-			//making sure that this code isn't started until you fix it.
-			
+		
+
 			while (world.isAirBlock(pos.down()) && pos.getY() > 55)
 			{
 				pos.subtract(new Vec3i(0, 1, 0));
 			}
+			
+						
 			if (!world.isAirBlock(pos))
 				return false;
-
+			
+			//What exactly is the part above supposed to do?
+			//you start with 0 and then check the block under it?
+			//use something like this instead
+			//pos = new BlockPos(pos.getX(), world.getTopSolidOrLiquidBlock(pos).getY(), pos.getZ());
+			
 			height = 2 + random.nextInt(5);
-
+			
+			//create log
 			for (int i = 0; i < height; i++)
 			{
 				world.setBlockState(pos.up(i), wood);
@@ -111,6 +117,9 @@ public class WorldGenDiamondTree extends WorldGenerator{
 
 	public void setBlock(World world, int x, int y, int z, IBlockState block)
 	{
+		//make sure that the chunk exists before you place something in it.
+		//you can check for chunks with world.getChunkProvider().chunkExists((int)(x/16), (int)(z/16))
+		
 		world.setBlockState(new BlockPos(x, y + height, z), block);
 	}
 }
