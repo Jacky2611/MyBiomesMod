@@ -33,8 +33,10 @@ public class BiomeGenWoods extends BiomeGenBase {
 		super.decorate(par1World, par2Random, pos);
 
 		for(int i = 0; i < par2Random.nextInt(2)+1; i++) {
-			int x = par2Random.nextInt(16) - 8;
-			int z = par2Random.nextInt(16) - 8;
+			
+			//what exactly are you doing here? 16+8 would be 24, that is bigger than a normal MC chunk.
+			int x = par2Random.nextInt(16) + 8;
+			int z = par2Random.nextInt(16) + 8;
 			int y = par2Random.nextInt(par1World.getHorizon(pos.add(x, 0, z)).getY() + 32);
 			
 			WorldGenDiamondTree worldGenDiamondTree = new WorldGenDiamondTree();
